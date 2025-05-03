@@ -1,0 +1,24 @@
+const searchBar = document.getElementById("search-bar");
+const header = document.querySelector("#header");
+const input = document.querySelector("#navSearch");
+const searchIcon = document.querySelector("#search-trigger");
+
+// Open search bar when clicking on the search input or icon
+searchIcon.addEventListener("click", () => {
+  header.classList.add("hidden");
+  searchBar.classList.add("active");
+});
+
+input.addEventListener("click", (event) => {
+  event.stopPropagation(); // Prevent click event from closing the search bar
+  header.classList.add("hidden");
+  searchBar.classList.add("active");
+});
+
+// Close search bar when clicking outside of it
+document.addEventListener("click", (event) => {
+  if (!searchBar.contains(event.target) && !header.contains(event.target)) {
+    searchBar.classList.remove("active");
+    header.classList.remove("hidden");
+  }
+});

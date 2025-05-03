@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zendo-Clone</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="./src/assets/app-zando-logo.png"
+      type="image/x-icon"
+    />
+    <style>
+      #search-bar.active {
+        height: 100px;
+        opacity: 1;
+        overflow: visible;
+      }
+    </style>
+  </head>
+  <body class="text-black font-popine-normal font-normal">
+    <!-- HEADER -->
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 z-50 w-full bg-[#f5f5f5] xl:px-[160px] xl:h-[100px] xl:py-[20px] lg:h-[100px] lg:pr-[10px] lg:pl-[10px] lg:py-[20px] md:h-[100px] md:pr-[10px] md:pl-[10px] md:py-[20px] transition-all duration-300"
+    >
+      <nav class="flex xl:flex-wrap items-center justify-between gap-2">
+        <!-- Left Section -->
+        <section
+          id="navbar"
+          class="lg:hidden md:hidden sm:hidden xl:flex flex-1 justify-end items-center gap-4"
+        >
+          <ul class="flex gap-3 text-[20px] font-semibold">
+            <li>WOMANS</li>
+            <li>MEN</li>
+            <li>BOYS</li>
+            <li>GIRLS</li>
+          </ul>
+        </section>
+        <div class="xl:hidden lg:flex">
+          <i class="fa-solid fa-bars text-[20px]"></i>
+        </div>
+        <!-- Center Section -->
+        <section class="flex-1 flex xl:justify-center lg:justify-start">
+          <img
+            src="./src/assets/zando-logo-small.png"
+            alt="Zando Logo"
+            class="lg:w-[150px] lg:h-[20px] md:w-[150px] sm:w-[100px]"
+          />
+        </section>
+
+        <!-- Right Section -->
+        <section id="navbar" class="flex-1 flex justify-end items-center gap-4">
+          <div class="relative">
+            <input
+              id="navSearch"
+              type="search"
+              placeholder="Search"
+              class="border px-2 py-1 font-semibold text-[15px] md:w-[200px]"
+            />
+            <i
+              id="search-trigger"
+              class="fa-solid fa-magnifying-glass absolute right-[10px] top-[8px] text-gray-500 cursor-pointer"
+            ></i>
+          </div>
+          <i class="fa-solid fa-bell text-[20px]"></i>
+          <i class="fa-solid fa-heart text-[20px]"></i>
+          <i class="fa-solid fa-bag-shopping text-[20px]"></i>
+          <p class="text-[20px] font-semibold">LOGIN</p>
+          <p class="text-[20px] font-semibold">REGISTER</p>
+        </section>
+      </nav>
+    </header>
+
+    <div
+      id="search-bar"
+      class="pl-[150px] flex justify-start items-center opacity-0 h-0 overflow-hidden bg-[#f5f5f5] transition-all duration-300 fixed top-0 left-0 w-full z-40"
+    >
+      <input
+        class="w-[1200px] border-b border-gray-400 outline-none text-black py-4 px-4 pr-[0px]"
+        type="search"
+        placeholder="What are you looking for"
+      />
+    </div>
+
+    <!-- HIDDEN helper -->
+    <div class="hidden h-[100px]"></div>
+
+    <main class="pt-[120px]"></main>
+    <footer></footer>
+
+    <script src="./src/page/js/script.js"></script>
+  </body>
+</html>
