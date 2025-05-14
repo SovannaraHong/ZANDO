@@ -147,3 +147,19 @@ DataJS.addEventListener("click", (e) => {
     e.target.classList.toggle("fa-solid");
   }
 });
+
+const bgDiv = document.getElementById("logo-bg");
+
+const bgImages = [
+  "/src/assets/img/bg-hero.png",
+  "/src/assets/img/1.jpg",
+  "/src/assets/img/2.jpg",
+  "/src/assets/img/3.jpg",
+];
+
+let current = 0;
+
+setInterval(() => {
+  current = (current + 1) % bgImages.length;
+  bgDiv.style.backgroundImage = `url('${bgImages[current]}')`;
+}, 5000); // 5000ms = 5 seconds
