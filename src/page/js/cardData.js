@@ -41,48 +41,48 @@ cardImg();
 
 const ContainerTotal = document.querySelector("#Container-card-promis");
 
-function CardPro() {
-  fetch("https://dummyjson.com/products")
-    .then((res) => res.json())
-    .then((data) => {
-      ContainerTotal.innerHTML = data.products
-        .map(
-          (pro) =>
-            `
-   
-    <div class="w-[400px] relative bg-[#f5f5f5]">
-            <div id="discount">
-              <p
-                class="absolute top-0 text-white bg-red-500 rounded-[5px] m-3 px-[10px] py-[3px]"
-              >
-                -41%
-              </p>
-            </div>
-            <img
-              class="w-[400px]"
-              src=${pro.images[0]}
-              alt=""
-            />
-            <div class="flex justify-between px-[15px] pt-[15px]">
-              <p class="text-red-500 font-semibold">
-                US $11.37 <del class="text-black font-normal">US $19.9</del>
-              </p>
-           <i class="fa-regular fa-heart icon-heart cursor-pointer"></i>
+// function CardPro() {
+//   fetch("https://dummyjson.com/products")
+//     .then((res) => res.json())
+//     .then((data) => {
+//       ContainerTotal.innerHTML = data.products
+//         .map(
+//           (pro) =>
+//             `
 
-            </div>
-            <p class="font-semibold px-[15px]">Unisex T-Shirts With Printed</p>
-            <div class="flex gap-[10px] px-[15px] py-[10px]">
-              <div class="bg-red-500 w-[15px] rounded-[3px] h-[15px]"></div>
-              <div class="bg-black w-[15px] rounded-[3px] h-[15px]"></div>
-            </div>
-          </div>
-    
-    `
-        )
-        .join("");
-    });
-}
-CardPro();
+//     <div class="w-[400px] relative bg-[#f5f5f5]">
+//             <div id="discount">
+//               <p
+//                 class="absolute top-0 text-white bg-red-500 rounded-[5px] m-3 px-[10px] py-[3px]"
+//               >
+//                 -41%
+//               </p>
+//             </div>
+//             <img
+//               class="w-[400px]"
+//               src=${pro.images[0]}
+//               alt=""
+//             />
+//             <div class="flex justify-between px-[15px] pt-[15px]">
+//               <p class="text-red-500 font-semibold">
+//                 US $11.37 <del class="text-black font-normal">US $19.9</del>
+//               </p>
+//            <i class="fa-regular fa-heart icon-heart cursor-pointer"></i>
+
+//             </div>
+//             <p class="font-semibold px-[15px]">Unisex T-Shirts With Printed</p>
+//             <div class="flex gap-[10px] px-[15px] py-[10px]">
+//               <div class="bg-red-500 w-[15px] rounded-[3px] h-[15px]"></div>
+//               <div class="bg-black w-[15px] rounded-[3px] h-[15px]"></div>
+//             </div>
+//           </div>
+
+//     `
+//         )
+//         .join("");
+//     });
+// }
+// CardPro();
 
 ContainerTotal.addEventListener("click", (e) => {
   if (e.target.classList.contains("icon-heart")) {
