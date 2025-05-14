@@ -14,85 +14,170 @@
       href="./src/assets/app-zando-logo.png"
       type="image/x-icon"
     />
+
     <style>
-      #search-bar.active {
-        height: 100px;
-        opacity: 1;
-        overflow: visible;
+      @media (max-width: 700px) {
+        .logo-img {
+          display: none;
+        }
+      }
+      @media (max-width: 400px) {
+        #logo-bg {
+          width: 100px;
+        }
+      }
+      .hidScroll {
+        overflow-x: auto;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE & Edge */
+      }
+
+      .hidScroll::-webkit-scrollbar {
+        height: 0px; /* WebKit browsers */
       }
     </style>
   </head>
-  <body class="text-black font-popine-normal font-normal">
-    <!-- HEADER -->
+  <body class="text-black font-popine-normal">
     <header
-      id="header"
-      class="fixed top-0 left-0 right-0 z-50 w-full bg-[#f5f5f5] xl:px-[160px] xl:h-[100px] xl:py-[20px] lg:h-[100px] lg:pr-[10px] lg:pl-[10px] lg:py-[20px] md:h-[100px] md:pr-[10px] md:pl-[10px] md:py-[20px] transition-all duration-300"
+      class="fixed top-0 left-0 w-full z-50 flex justify-between px-[30px] py-[20px] xl:px-[160px] lg:gap-[29px] lg:px-[30px] items-center bg-[#f5f5f5] h-15"
     >
-      <nav class="flex xl:flex-wrap items-center justify-between gap-2">
-        <!-- Left Section -->
-        <section
-          id="navbar"
-          class="lg:hidden md:hidden sm:hidden xl:flex flex-1 justify-end items-center gap-4"
+      <!-- LEFT -->
+      <section class="flex-1 lg:flex xl:flex hidden">
+        <ul
+          class="flex items-center justify-start gap-4 text-[20px] font-semibold"
         >
-          <ul class="flex gap-3 text-[20px] font-semibold">
-            <li>WOMANS</li>
-            <li>MEN</li>
-            <li>BOYS</li>
-            <li>GIRLS</li>
-          </ul>
-        </section>
-        <div class="xl:hidden lg:flex">
-          <i class="fa-solid fa-bars text-[20px]"></i>
-        </div>
-        <!-- Center Section -->
-        <section class="flex-1 flex xl:justify-center lg:justify-start">
-          <img
-            src="./src/assets/zando-logo-small.png"
-            alt="Zando Logo"
-            class="lg:w-[150px] lg:h-[20px] md:w-[150px] sm:w-[100px]"
-          />
-        </section>
+          <li><a href="#">WOMEN</a></li>
+          <li><a href="#">MENS</a></li>
+          <li><a href="#">BOYS</a></li>
+          <li><a href="#">GIRLS</a></li>
+        </ul>
+      </section>
+      <div
+        class="xl:hidden lg:hidden md:flex md:pr-[20px] sm:pr-[20px] pr-[20px]"
+      >
+        <i class="fa-solid fa-bars text-[20px]"></i>
+      </div>
+      <!-- CENTER -->
+      <section class="flex justify-center items-center w-[150px]">
+        <img
+          src="./src/assets/zando-logo-small.png"
+          class="w-[150px] logo-img"
+          alt="Zando Logo"
+        />
+      </section>
 
-        <!-- Right Section -->
-        <section id="navbar" class="flex-1 flex justify-end items-center gap-4">
-          <div class="relative">
-            <input
-              id="navSearch"
-              type="search"
-              placeholder="Search"
-              class="border px-2 py-1 font-semibold text-[15px] md:w-[200px]"
-            />
-            <i
-              id="search-trigger"
-              class="fa-solid fa-magnifying-glass absolute right-[10px] top-[8px] text-gray-500 cursor-pointer"
-            ></i>
-          </div>
-          <i class="fa-solid fa-bell text-[20px]"></i>
-          <i class="fa-solid fa-heart text-[20px]"></i>
-          <i class="fa-solid fa-bag-shopping text-[20px]"></i>
-          <p class="text-[20px] font-semibold">LOGIN</p>
-          <p class="text-[20px] font-semibold">REGISTER</p>
-        </section>
-      </nav>
+      <!-- RIGHT -->
+      <section class="flex-1 flex justify-end items-center gap-5">
+        <input
+          class="w-[150px] font-normal text-[17px] border px-[10px]"
+          type="search"
+          placeholder="Search"
+        />
+        <i class="fa-solid fa-bell text-[20px]"></i>
+        <i class="fa-solid fa-heart text-[20px]"></i>
+        <i class="fa-solid fa-bag-shopping text-[20px]"></i>
+        <p
+          class="text-[20px] font-semibold hidden xl:flex md:flex lg:flex sm:flex"
+        >
+          LOGIN
+        </p>
+        <p
+          class="text-[20px] font-semibold hidden xl:flex md:flex lg:flex sm:flex"
+        >
+          REGISTER
+        </p>
+      </section>
     </header>
 
-    <div
-      id="search-bar"
-      class="pl-[150px] flex justify-start items-center opacity-0 h-0 overflow-hidden bg-[#f5f5f5] transition-all duration-300 fixed top-0 left-0 w-full z-40"
-    >
-      <input
-        class="w-[1200px] border-b border-gray-400 outline-none text-black py-4 px-4 pr-[0px]"
-        type="search"
-        placeholder="What are you looking for"
-      />
-    </div>
+    <main>
+      <section
+        id="hero-section"
+        class="lg:pt-[80px] md:pt-[100px] sm:pt-[90px] pt-[90px]"
+      >
+        <div class="xl:px-[130px] lg:px-[30px] md:px-[20px] sm:px-[30px]">
+          <div
+            id="logo-bg
+          "
+            class="md:h-[300px] sm:h-[200px] xl:h-[600px] lg:h-[600px] h-[200px] bg-center bg-cover bg-[url('/src/assets/img/bg-hero.png')]"
+          ></div>
+        </div>
+      </section>
 
-    <!-- HIDDEN helper -->
-    <div class="hidden h-[100px]"></div>
+      <section>
+        <div class="flex justify-center items-center">
+          <div
+            class="w-[100px] flex justify-center items-center xl:w-[160px] xl:gap-[90px] lg:w-[160px] lg:gap-[30px] md:w-[130px] md:gap-[20px] sm:w-[100px] sm:gap-[20px]"
+          >
+            <img
+              class=""
+              src="https://zandokh.com/image/catalog/banner/2025/ZANDO/Category%20lifestyle,%20sportlife,%20smartcasual/Update%20May/Zando%202.jpg"
+              alt=""
+            />
 
-    <main class="pt-[120px]"></main>
+            <img
+              src="https://zandokh.com/image/catalog/banner/2025/ZANDO/May/Tee%20Deal%2040/Ten11/TEN%20ELEVEN%20Logo%20Wordmark%20Black.png"
+              alt=""
+            />
+
+            <img
+              src="https://zandokh.com/image/catalog/logo/product-brand/trans/gatoni.png"
+              alt=""
+            /><img
+              src="https://zandokh.com/image/catalog/logo/product-brand/trans/routine.png"
+              alt=""
+            /><img
+              src="https://zandokh.com/image/catalog/logo/product-brand/trans/361.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="xl:px-[130px]">
+        <div
+          id="card-container-picture"
+          class="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:gap-[60px] lg:gap-[60px] md:gap-y-[50px] md:gap-x-[10px] sm:gap-y-[20px] sm:gap-x-[10px] grid-cols-3 gap-[10px]"
+        ></div>
+      </section>
+
+      <section
+        class="xl:px-[130px] xl:pt-[80px] md:px-[10px] sm:px-[10px] lg:pt-[30px] md:pt-[30px] sm:pt-[30px]"
+      >
+        <h2
+          class="font-semibold xl:text-[35px] xl:pb-[40px] lg:text-[35px] lg:pb-[40px] md:text-[35px] md:pb-[40px] sm:text-[35px] sm:pb-[40px]"
+        >
+          Just for Him - Exclusive offer!
+        </h2>
+        <div
+          id="data-json"
+          class="pop-song flex scroll-smooth overflow-auto hidScroll cursor-pointer justify-between xl:gap-[20px] lg:gap-[20px] md:gap-[20px] sm:gap-[20px] gap-[10px]"
+        ></div>
+        <div class="relative">
+          <i
+            id="scroll-right"
+            class="fa-solid fa-arrow-right absolute right-15 bottom-[250px] bg-gray-600 text-white p-[15px] rounded-full text-[20px]"
+          ></i>
+          <i
+            id="scroll-left"
+            class="fa-solid fa-arrow-left absolute left-15 bottom-[250px] bg-gray-600 text-white p-[15px] rounded-full text-[20px]"
+          ></i>
+        </div>
+      </section>
+
+      <section class="lg:px-[130px] lg:pt-[120px]">
+        <h2 class="text-[35px] font-semibold pb-[20px]">
+          Just for Him - Exclusive offer!
+        </h2>
+        <div
+          id="Container-card-promis"
+          class="grid grid-cols-3 gap-[60px]"
+        ></div>
+      </section>
+    </main>
+    <!-- ./src/page/data/data.json -->
     <footer></footer>
 
+    <script src="./src/page/js/cardData.js"></script>
     <script src="./src/page/js/script.js"></script>
   </body>
 </html>
